@@ -25,7 +25,10 @@ namespace Server.Controllers
              if (x < 0) throw new ArgumentNullException(
                  "Must be at leat 0", nameof(x));
 
-             return Fib(x).current;
+            // return Fib(x).current;
+
+             (int current, int previous) = Fib(x);
+             return previous;
 
             (int current, int previous) Fib(int i) {
                     if (i == 0) return (0, 1);      
