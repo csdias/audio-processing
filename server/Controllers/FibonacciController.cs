@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +22,17 @@ namespace Server.Controllers
         [HttpGet]
         public int Get(int x)
         {
+            var subfolder = Directory.GetCurrentDirectory();
+
+            //foreach(var subfolder in Directory.GetDirectoriesDirectory($"{subfolder}wav-fles")){
+              //  var test = subfolder;
+
+            //}
+
+    //string SendData = System.IO.File.ReadAllText(file);
+
+
+
 
              if (x < 0) throw new ArgumentNullException(
                  "Must be at leat 0", nameof(x));
