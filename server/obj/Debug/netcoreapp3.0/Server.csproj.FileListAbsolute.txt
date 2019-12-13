@@ -16,3 +16,8 @@ c:\Projetos\CSharp\AudioProcessing\Server\obj\Debug\netcoreapp3.0\Server.Assembl
 c:\Projetos\CSharp\AudioProcessing\Server\obj\Debug\netcoreapp3.0\Server.RazorTargetAssemblyInfo.cache
 c:\Projetos\CSharp\AudioProcessing\Server\obj\Debug\netcoreapp3.0\Server.dll
 c:\Projetos\CSharp\AudioProcessing\Server\obj\Debug\netcoreapp3.0\Server.pdb
+C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0001\metadata.json
+C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0002\metadata.json
+C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0003\metadata.json
+C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0004\metadata.json
+C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0005\metadata.json
