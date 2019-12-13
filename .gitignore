@@ -322,12 +322,8 @@ MarketUP.Marketplace.AngularApp/dist/
 
 # dependencies
 /client/node_modules
-<<<<<<< HEAD
-/server/bin
-=======
 /server/bin/
 /server/obj/
->>>>>>> fc4d97b8571dcb07cb5727dfe8e0d6de5e162add
 /.pnp
 .pnp.js
 
