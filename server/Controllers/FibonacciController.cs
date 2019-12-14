@@ -32,12 +32,11 @@ namespace Server.Controllers
                 metadataFilePath = Path.Combine(subfolder, @"metadata.json");
                 Console.WriteLine($"Reading {metadataFilePath}");
 
-                var text = System.IO.File.ReadAllText(metadataFilePath);
                 //var options = new JsonSerializerOptions(){
                     //PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
                 //}
                 
-                var metadataCollection = JsonSerializer.Deserialize<List<Metadata>>(text);
+                var metadataCollection = GetMetadataCollection(metadataFilePath);
 
                 foreach(var metadata in metadataCollection){
                     var audioFilePath = Path.Combine(subfolder, metadata.File.FileName);
@@ -54,6 +53,9 @@ namespace Server.Controllers
                     var newPath = Path.Combine(currentDirectory, "ready-for-transcription", $"{uniqueId}.WAV"); 
 
                     CreateCompressedFile(audioFilePath, newPath);
+
+                    SaveSingleMetadata(metadata, newPath + ".json");
+
                 }
 
             }
@@ -93,6 +95,28 @@ namespace Server.Controllers
             return BitConverter.ToString(md5Hash);
         }
 
-        
+        static List<Metadata> GetMetadataCollection(string metadataFilePath){
+            var text = System.IO.File.ReadAllText(metadataFilePath);
+            var metadataCollection = JsonSerializer.Deserialize<List<Metadata>>(text);
+
+            return metadataCollection;
+        }
+
+        static void SaveSingleMetadata(Metadata metadata, string metadataFilePath){
+            //todo: esta gravando em branco
+
+            var uniqueId = Guid.NewGuid();
+
+            Console.WriteLine($"Creating a metadata file |{metadataFilePath}{uniqueId}");
+
+            var metadataJson = JsonSerializer.Serialize<Metadata>(metadata);
+
+            var stream = new MemoryStream(System.Text.Encoding.Default.GetBytes(metadataJson));
+
+            var metadataFileStream = System.IO.File.Open(metadataFilePath, FileMode.Create);            
+            metadataFileStream.CopyTo(stream);
+
+        }        
+       
     }
 }

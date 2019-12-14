@@ -21,3 +21,4 @@ C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0002
 C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0003\metadata.json
 C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0004\metadata.json
 C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\wav-files\0005\metadata.json
+C:\Projetos\CSharp\AudioProcessing\Server\bin\Debug\netcoreapp3.0\ready-for-transcription\a466796e-b39c-4f3a-9cb7-741bf00c8850.WAV.json
